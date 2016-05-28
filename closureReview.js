@@ -20,3 +20,20 @@ Write a function that accepts a function as it's first argument and returns a ne
 Once completed, add a second arguments that allows the function to be executed N number of times. After the function has been called N number of times, console.log('STAHHP');
 
 */
+
+function runN (fn, timesToRun) {
+  var count = timesToRun;
+  return function () {
+    if (count > 0) {
+      fn();
+      count--;
+    }
+    else {
+      console.log('STAHHP')
+    }
+  }
+}
+
+var result = runN(function(){
+  console.log('run')
+}, 5);
