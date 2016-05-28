@@ -7,8 +7,9 @@ first(names, function(firstName){
   console.log('The first name in names is ', firstName)
 });
 
-
-
+function first (arr, cb) {
+  return cb(arr[0]);
+}
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -20,6 +21,9 @@ last(names, function(lastName){
   console.log('The last name in names is ', lastName);
 });
 
+function last(arr, cb) {
+  return cb(arr[0]);
+}
 
 
 
